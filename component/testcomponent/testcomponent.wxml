@@ -1,0 +1,11 @@
+<!--component/testcomponent/testcomponent.wxml-->
+<custom-component class="my-class">
+  <text>component/testcomponent/testcomponent.wxml</text>
+  <view class="inner">
+    {{innerText}}
+  </view>
+  <slot></slot>
+  <view>data: {{a}}</view>
+<view>computed: {{b}}</view>
+<button bindtap="onTap">click</button>
+</custom-component>

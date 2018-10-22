@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/test/test",
+    "pages/lizi/lizi",
+    "pages/gundong/gundong",
+    "pages/xiangji/xiangji"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "四月は君の嘘",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页2"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "测试"
+      },
+      {
+        "pagePath": "pages/gundong/gundong",
+        "text": "滚动"
+      }
+    ]
+  }
+}

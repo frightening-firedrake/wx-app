@@ -1,0 +1,43 @@
+<!--pages/test/test.wxml-->
+<view>{{text}}</view>
+<button bindtap="changeText"> Change normal data </button>
+<view>{{num}}</view>
+<button bindtap="changeNum"> Change normal num </button>
+<view>{{array[0].text}}</view>
+<button bindtap="changeItemInArray"> Change Array data </button>
+<view>{{object.text}}</view>
+<button bindtap="changeItemInObject"> Change Object data </button>
+<view>{{newField.text}}</view>
+<button bindtap="addNewField"> Add new data </button>
+<view class="btn-area">
+  <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">跳转到新页面</navigator>
+  <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
+  <navigator url="/pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
+  <navigator target="miniProgram" open-type="navigate" app-id="" path="" extra-data="" version="release">打开绑定的小程序</navigator>
+</view>
+
+<!--wxml-->
+<template name="staffName">
+  <view>
+    FirstName: {{firstName}}, LastName: {{lastName}}
+  </view>
+</template>
+
+<template is="staffName" data="{{...staffA}}"></template>
+<template is="staffName" data="{{...staffB}}"></template>
+<template is="staffName" data="{{...staffC}}"></template>
+<view>
+  <!-- 以下是对一个自定义组件的引用 -->
+  <testcomponent my-class="red-text" inner-text="Some text"></testcomponent>
+<my-component my-class="red-text" />
+</view>
+<template name="odd">
+  <view> odd </view>
+</template>
+<template name="even">
+  <view> even </view>
+</template>
+
+<block wx:for="{{[1, 2, 3, 4, 5]}}">
+    <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"/>
+</block>

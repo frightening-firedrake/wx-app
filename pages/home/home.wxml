@@ -1,0 +1,19 @@
+<!--pages/home/home.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="index" >
+     <!-- <swiper-item class="imgbox" style="background-image:url({{item}});">  -->
+     <swiper-item> 
+       <!-- <navigator open-type="switchTab" url="../../pages/index/index" hover-class="navigator-hover"  class="imgbox" style="background-image:url({{item}});"></navigator> -->
+
+    <!-- <swiper-item> -->
+       <image mode="aspectFill" background-size="cover" src="{{item}}" class="slide-image" width="355" height="150"/> 
+       <!-- <image src="{{item}}" class="slide-image" width="355" height="150"/>  -->
+    </swiper-item>
+  </block>
+</swiper>
+<button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button>
+<slider bindchange="intervalChange" show-value min="500" max="2000"/> interval
+<slider bindchange="durationChange" show-value min="1000" max="10000"/> duration
+<navigator url="../../pages/xiangji/xiangji" hover-class="navigator-hover">我是相机</navigator>
